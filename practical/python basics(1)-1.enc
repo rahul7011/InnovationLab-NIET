@@ -1,0 +1,2881 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# #  Python
+# 
+# In case you are wondering, we will be using Python 2.7. Python 3.3 is very similar, but we won't worry about the differences in this session.
+# iPython Notebook
+# 
+# 
+# #iPython Notebook
+# 
+# For the first hour we will be working with Python in your browser using iPython Notebook. Here is an example block of code:
+
+# In[ ]:
+
+
+d ={1:{id:100,'name'='rina'},
+   2:{id:100,'name'='rina'}}
+
+
+# In[1]:
+
+
+print "hello"
+
+
+# In[ ]:
+
+
+
+
+
+# In[2]:
+
+
+print("hello")
+
+
+# In[ ]:
+
+
+1+2
+
+
+# In[4]:
+
+
+a=10
+A=20
+A="renuka"
+
+
+# In[5]:
+
+
+print(a)
+print(A)
+print(type(a))
+print(type(A))
+
+
+# In[ ]:
+
+
+import os
+os.system("cls")
+
+
+# # python 3.5+3.7 total keywords==> 33+2=35
+
+# In[ ]:
+
+
+import keyword
+print(keyword.kwlist)
+
+
+# # without using print function disply msg in python
+
+# In[7]:
+
+
+import sys
+sys.path
+
+
+# In[8]:
+
+
+sys.stdout.write("welcome to AI Intel Lab")
+
+
+# In[9]:
+
+
+a=10
+b=10
+c=10
+print(id(a),id(b),id(c))
+
+
+# In[10]:
+
+
+a=b=c=12
+print(a,b,c)
+print(id(a))
+print(id(b))
+print(id(c))
+print()
+a,b,c=1,67,"niet"
+print(a,b,c)
+print(id(a))
+print(id(b))
+print(id(c))
+
+
+# # here 3 variable share the same memory location(same address),if value of variable is different it takes another memory.
+
+# In[ ]:
+
+
+a=10
+A=20
+b=40
+print(a,A,b)
+print(id(a),id(b),id(c))
+
+
+# # keywords: keywords are spacial words,never use it as variable bcoz it gives u error msg
+
+# In[11]:
+
+
+if=2
+print(if)
+
+
+# In[12]:
+
+
+while =56.6
+print(while)
+
+
+# # multiple assignment: Assigning multiple values to a variable
+
+# In[3]:
+
+
+a=10
+b=13
+c="renuka"
+s=50000
+a,b,c,s = 10,13,"renuka",50000
+print(a,b,c,s)
+print(id(a),id(b),id(c))
+
+
+# In[4]:
+
+
+a=b=c=10
+print(id(a),id(b),id(c))
+
+
+# In[2]:
+
+
+print(a,b,c)
+
+
+# # write a program to swap a two number
+
+# In[ ]:
+
+
+a,b =10,20
+print("before swaping:",a,b)
+a,b = b,a
+print("after swaping:",a,b)
+
+
+# # swaping a two number using third variable
+
+# In[1]:
+
+
+a = int(input("enter first number"))
+b = int(input("enter second number"))
+#before swaping
+print("a is:",a)
+print("b is:",b)
+print()
+
+t = a
+a = b
+b = t
+#after swaping
+print("a is:",a)
+print("b is:",b)
+
+
+# # identifiers: identifiers are the name used to identify a variable, function, class or object
+
+# In[5]:
+
+
+at@123 = 30
+print(at@123)
+
+
+# In[6]:
+
+
+w.a=34
+print(w.a)
+
+
+# In[7]:
+
+
+at_salary = 50000
+print(at_salary)
+
+
+# In[8]:
+
+
+_3r = 12
+print(_3r)
+
+
+# # additin of two number /input from the user or runtime input
+
+# In[ ]:
+
+
+a=int(input("enter first number is :"))
+b=int(input("enter second number is :"))
+sum = a+b
+print("sum:", sum)
+
+
+# In[ ]:
+
+
+a=int(input("enter first number is :"))
+b=int(input("enter second number is :"))
+sub = a-b
+print("sub:", sub)
+
+
+# In[ ]:
+
+
+a=10
+print(a)
+
+
+# # literals in python: String Literals, Numeric Literalls, Boolean Literals, Spacial Literals
+
+# In[ ]:
+
+
+name = 'NIET'
+NAME = "NIET"
+print(name,NAME)
+
+
+# In[ ]:
+
+
+multiplelines = ''' str1
+str2
+str3
+str4 '''
+print(multiplelines)
+
+
+# # Two or more physical lines may be joined into logical lines using backslash characters(\) .Expressions in parentheses, square brackets, or curly braces not need to use the line continuation character.use of the line continuation character (\) to denote that the line should continue
+
+# In[16]:
+
+
+m ='helloworld'
+print(m)
+
+
+# In[17]:
+
+
+t ='''hello
+world '''
+print(t)
+
+
+# In[ ]:
+
+
+t ='''helloworld '''
+print(t)
+
+
+# In[18]:
+
+
+weekDays = ['Sunday', 'Monday', 'Tuesday'
+'Wednesday', 'Thursday', 'Friday'
+'Saturday']
+print(weekDays)
+
+
+# In[ ]:
+
+
+weekDays = ('Sunday', 'Monday', 'Tuesday',
+'Wednesday' ,'Thursday', 'Friday',
+'Saturday')
+print(weekDays)
+
+
+# In[ ]:
+
+
+#This is a single line comment. 
+   #This comment will 
+   #span into two lines.
+   
+   
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+letter = "python"
+
+
+# In[ ]:
+
+
+for letter in'Python':# First Example
+    if letter =='h':
+        continue
+print('Current Letter :', letter)
+
+
+# In[ ]:
+
+
+a = "hello","renuka","vishu","pitamber"
+
+
+# # Quotation in Python
+
+# In[ ]:
+
+
+#Python accepts single ('), double (") and triple (''' or """) quotes to denote string literals,
+#as long as the same type of quote starts and ends the string.
+
+
+# In[ ]:
+
+
+word ='word'
+print(word)
+print()
+sentence ="This is a sentence."
+print(sentence)
+paragraph ="""This is a paragraph. It is
+made up of multiple lines and sentences."""
+print(paragraph)
+
+
+# In[19]:
+
+
+"""This is a paragraph. It is
+made up of multiple lines and sentences."""
+
+
+# # Comments in Python
+
+# In[ ]:
+
+
+# hash sign is used to comments in python (that is ignore by the compiler/translator)
+
+
+# In[ ]:
+
+
+a = int(input ("enter value of a is "))#get value of a from user
+b=int(input("enter value of b is "))#get the value of b from user
+print()
+
+# value of a and b before swaping
+print("value of a is before swaping:",a)
+print("value of b is before swaping:",b)
+
+#swaping two number using third variable
+temp = a
+a = b
+b = temp
+#after swaping value of a and b
+print("value of a is after swaping:",a)
+print("value of b is after swaping:",b)
+print()
+
+#swaping two number without using third variable
+print("value of a is before swaping:",a)
+print("value of b is before swaping:",b)
+print()
+a,b = b,a
+
+print("value of a is before swaping:",a)
+print("value of b is before swaping:",b)
+
+
+print()
+#swaping two number without using third variable
+print("value of a is before swaping:",a)
+print("value of b is before swaping:",b)
+print()
+a=a+b
+b=a-b
+a=a-b
+print("value of a is before swaping:",a)
+print("value of b is before swaping:",b)
+print()
+
+
+# # Python Variable Types
+# 
+
+# In[ ]:
+
+
+#Variables are nothing but reserved memory locations to store values. This means that
+#when you create a variable you reserve some space in memory.Assigning Values to Variables.Python
+#variables do not need explicit declaration to reserve memory space. Thedeclaration happens automatically 
+#when you assign a value to a variable. The equal
+#(=)sign  is used to assign values to variables.""""
+
+
+# In[ ]:
+
+
+#Multiple Assignment
+
+
+# In[ ]:
+
+
+#Example1:
+a = b = c =1
+print(a,b,c)
+#Example2:
+a, b, c = 1,2,"john"
+
+
+# In[ ]:
+
+
+print(a,b,c)
+
+
+# In[9]:
+
+
+10 == 10.0
+
+
+# # STANDARD DATA TYPES
+
+# # generally in python data types are six,but main two type 1)mutable, 2)immutable
+#     
+
+# In[ ]:
+
+
+#MUTABLE(CHANGEABLE):It is possible to add, delete, insert, and rearrange items in a list or dictionary
+
+#2) List
+#3)Dictionary
+#4) set
+
+
+#IMMUTABLE(NON-CHANGEBLE):which means their contents 
+#can't be altered after creation.
+ #1) Tuple
+# 2)String
+#3)Number
+
+
+# # Number data types store numeric values. They are immutable data types, means that  #changing the value of a number data type results in a newly allocated object
+
+# In[ ]:
+
+
+# int()
+# float()
+# complex(x,y)
+
+
+# In[ ]:
+
+
+a=20
+print(type(a))
+print(a)
+b=20.4
+print(type(b))
+print(b)
+c="AI lab"
+print(type(c))
+print(c)
+
+
+# # Python includes following functions that perform mathematical calculations and all these functions cannot be used directly and for that we need to import the math function in it.
+
+# In[13]:
+
+
+import math
+help(math)
+
+
+# In[14]:
+
+
+math.ceil(3.6)
+
+
+# In[1]:
+
+
+a=34
+print(type(a))
+print(id(a))
+print(a)
+b=59.98
+print(a,b)
+
+
+# In[ ]:
+
+
+(5+7j)-(6+8j)
+
+
+# In[ ]:
+
+
+abs(23.89)
+
+
+# In[ ]:
+
+
+abs(-20)
+
+
+# In[ ]:
+
+
+#power function
+#x**y
+(3**2)+(2**6)
+
+
+# In[ ]:
+
+
+#-1 if x < y, 0 if x == y, or 1 if x > y
+
+
+# In[ ]:
+
+
+a=12
+b=14
+
+
+# In[ ]:
+
+
+a<b
+
+
+# In[ ]:
+
+
+a==b
+
+
+# In[ ]:
+
+
+x = 34
+y = 45
+
+
+# In[ ]:
+
+
+max(x,y)
+
+
+# In[ ]:
+
+
+c = 7
+b = 9
+
+
+# In[ ]:
+
+
+max(c,b)
+
+
+# In[ ]:
+
+
+import math
+math.ceil(2.3)
+
+
+# In[ ]:
+
+
+math.floor(3.4)
+
+
+# In[ ]:
+
+
+math.sqrt(64)
+
+
+# In[ ]:
+
+
+math.exp(4)
+
+
+# # Choice()
+# 
+
+# In[ ]:
+
+
+import random
+
+print("choice([1, 2, 3, 5, 9]) : ", random.choice([1,2,3,5,9]))
+print("choice('A String') : ", random.choice('A String'))
+
+
+# # randrange()
+
+# In[ ]:
+
+
+import random
+# Select an even number in 100 <= number < 1000
+print("randrange(100, 1000, 2) : ", random.randrange(100,1000,2))
+# Select another number in 100 <= number < 1000"
+print("randrange(100, 1000, 3) : ", random.randrange(100,1000,3))
+
+
+# # random():The method random() returns a random float r, such that 0 is less than or equal to r and r is less than 1.
+
+# In[ ]:
+
+
+import random
+# First random number
+print("random() : ", random.random())
+# Second random number
+print("random() : ", random.random())
+
+
+# # shuffle():The method shuffle() randomizes the items of a list in place.
+
+# In[ ]:
+
+
+list =[20,16,10,5]
+random.shuffle(list)
+print("Reshuffled list : ", list)
+random.shuffle(list)
+print("Reshuffled list : ", list)
+
+
+# # """ STRING–
+# string is immutable data type. 
+# it can  be written in (''),(" ") or (''' ''') no restriction. 
+# They are bunch of characters. In other words they are identified as contiguous(IN SEQUENCE) set of characters.
+# Subset of strings can be taken using slice operator [],[:]."""
+# 
+
+# In[ ]:
+
+
+str = 'machine learning'
+str1="hi,my name is abscg, i m here for AI training, "
+str2=''' hi, my name is asd
+my name is wer,
+my name is such
+   '''
+
+
+# # forward index: always start with '0'
+# backward index:always start  with '-1'
+
+# In[3]:
+
+
+str = 'machine learning'
+str1="hi,my name is abscg, i m here for AI training, "
+str2=''' hi, my name is asd
+my name is wer,
+my name is such
+   '''
+print("str=",str)
+print("str1=",str1)
+print("str2=",str2)
+print()
+print(str[:])
+
+
+# # slicing in string
+
+# In[3]:
+
+
+str = 'machine learning'
+print(str[4])
+print(str[1:5])
+print(str[2:9:2])
+print(str[-7])
+print(str[-7:-4])
+print(str[:])
+print(str[-10:-2:-2])
+print(str[-2:-10:-2])
+
+
+# # string concatenation operator(+)
+
+# In[12]:
+
+
+print(str+str1)
+
+
+# In[13]:
+
+
+print("NIET"+'CLASS')
+
+
+# # STRING REPICATION OPERATOR
+
+# In[14]:
+
+
+print(4*'\tNIET')
+
+
+# In[15]:
+
+
+print(4*"niet\t")
+
+
+# In[3]:
+
+
+print(5*"renuka\n")
+
+
+# In[4]:
+
+
+print(4*'\tNIET',end="")
+print(4*"niet\t",end="")
+print(5*"renuka",end="")
+
+
+# # Updating Strings
+
+# In[5]:
+
+
+str ='Hello World!'
+print("Updated String :- ", str[:6]+'Python')
+str1 ='Hello World!'
+print("Updated String :- ", str[:]+'Python')
+str1 ='Hello World!'
+print("Updated String :- ", str[5:]+'Python')
+str1 ='Hello World!'
+print("Updated String :- ", str[:]+'Python'+"23")
+str1 ='Hello World!'
+#str[1]='h'
+#print(str)
+l=[1,23,'r']
+print(l)
+l[1]=234
+print(l)
+  
+  
+  
+
+
+# # Built-in String Methods
+
+# # capitalize()
+
+# In[18]:
+
+
+str1.capitalize()#capitalize the first character of the string
+print(str1)
+
+
+# In[19]:
+
+
+print(str)
+
+
+# In[20]:
+
+
+str2="renuka"
+print(str2.capitalize())
+
+
+# # Count() Method
+
+# In[21]:
+
+
+#str.count(sub, start, end)
+print(str2.count('e',0,7))
+
+
+# In[24]:
+
+
+str ="this is string example....wow!!!"
+sub="i"
+print("str.count(sub, 4, 40) : ", str.count(sub,4,40))
+sub="wow"
+print("str.count(sub) : ", str.count(sub))
+
+
+# # Find() Method
+
+# In[25]:
+
+
+str1 ="this is string example....wow!!!"
+str2 ="exam"
+print(str1.find(str2))
+
+
+# # replace() method :str.replace(old,new[, max])
+
+# In[26]:
+
+
+str ="this is string example....wow!!! this is really string"
+print(str.replace("is","was"))
+print(str.replace("is","was",3))
+
+
+# # upper() Method : syntax:str.upper()
+
+# In[ ]:
+
+
+str ="this is string example....wow!!!"
+print("str.capitalize() : ", str.upper())
+
+
+# # lower() Method: syntax: str.lower()
+
+# In[27]:
+
+
+str ="THIS IS STRING EXAMPLE....WOW!!!"
+print(str.lower())
+
+
+# # join() Method: syntax : str.join(sequence)
+
+# In[7]:
+
+
+s ="-_+"
+seq =("a","b","c")# This is sequence of strings.
+print(s.join( seq ))
+
+
+# # len() Method: syntax: len( str )
+
+# In[30]:
+
+
+str ="this is string example....wow!!!"
+print("Length of the string: ", len(str))
+
+
+# # Isalpha() Method: syntax:str.isalpha()
+# 
+
+# In[31]:
+
+
+str ="this"# No space & digit in this string
+print(str.isalpha())
+str ="this is string example....wow!!!"
+print(str.isalpha())
+
+
+# # rstrip() method:
+
+# In[32]:
+
+
+some_sentence = "there is some space at the end    "
+print(some_sentence)
+print(len(some_sentence))
+print((some_sentence.rstrip()))
+print(len(some_sentence.rstrip()))
+
+
+# In[33]:
+
+
+increment = '4%'
+print(increment.rstrip('%'))
+
+
+# In[10]:
+
+
+some_sentence = "   there is some space at the start"
+print(some_sentence)
+print(len(some_sentence))
+print((some_sentence.lstrip()))
+print(len(some_sentence.lstrip()))
+
+
+# In[34]:
+
+
+num_with_char = '$$4566RENUKA&&'
+print(num_with_char.lstrip('$').rstrip('&'))
+
+
+# In[35]:
+
+
+v = "56 men are there"
+no_of_men = v[0:2]
+print("number of men is",no_of_men)
+
+
+# In[15]:
+
+
+w = v[2:]
+print(w)
+w.replace("e","E")
+
+
+# In[19]:
+
+
+num = 1,2,3,4,5,6,7,8,9,10,11,12
+print(num[1::2])
+print(num[0::2])
+
+
+# In[23]:
+
+
+first_name ="Renuka"
+last_name = "Sharma"
+print(first_name +" "+last_name)
+print(first_name +" "+last_name + " Adhikari ")
+
+
+# # LIST DATA TYPE: 
+# """Python list are the data structure that is capable of holding  different type of data. 
+# Python list are mutable i.e.'changable'.
+# A list can be composed by storing a different type of values seperated by commas.
+# A python list is enclosed between square brackets '[]'. 
+# The elements are stored in the index basis with starting index as 0 or -1. """
+
+# In[36]:
+
+
+list1 =['Lucy','Avergers',1997,2000]
+
+
+# # Accessing Values in Lists
+
+# In[3]:
+
+
+list1 =['physics','chemistry',1997,2000]
+list2 =[1,2,3,4,5,6,7]
+print("list1[0]: ",list1[0])
+print("list2[1:5]: ",list2[1:5])
+
+
+# # Updating Lists
+
+# In[6]:
+
+
+list =['physics','chemistry',1997,2000]
+print("Value available at index 2 : ")
+print(list[2])
+list[2]=2001
+print("New value available at index 2 : ")
+print(list[2])
+
+
+# # Delete List Elements
+
+# In[3]:
+
+
+list2 =['physics','chemistry',1997,2000]
+print("list before deletion ")
+print(list2)
+print(" list after deletion ")
+del(list2[2])
+print(list2)
+
+
+# # Basic List Operations
+
+# In[11]:
+
+
+# Length
+
+
+# In[12]:
+
+
+len([1, 2, 3])
+
+
+# In[13]:
+
+
+#Concatenation
+
+
+# In[14]:
+
+
+[1, 2, 3] + [4, 5, 6]
+
+
+# In[15]:
+
+
+#Repetition
+
+
+# In[16]:
+
+
+['NIET!'] * 4
+
+
+# In[17]:
+
+
+#Membership
+
+
+# In[18]:
+
+
+3 in [1, 2, 3]
+
+
+# In[19]:
+
+
+#iteration
+
+
+# In[3]:
+
+
+
+import time
+n=int(input())
+for x in range(n):
+    print(x,end="")
+    time.sleep(2)
+print()
+for x in [1,2,3]:
+    print(x,end="")
+    time.sleep(2)
+print()
+for x in range(1,5+1):
+    print(x,end="")
+print()
+for x in range(5):
+    print(x,end="")
+    time.sleep(2)
+print()
+for x in range(0,12,2):
+    print(x,end="")
+    time.sleep(2)
+for x in range(10,0,-2):
+    print(x,end="")
+    time.sleep(2)
+    
+
+
+    
+
+
+# # Python List Builtin Methods
+
+# In[32]:
+
+
+# 1) append() Method:The method append()
+#appends a passed objinto the existing list.
+#Syntax:list:append(obj)
+
+
+# In[33]:
+
+
+aList = [123,'xyz','zara','abc']
+aList.append(209)
+print("Updated List : ",aList)
+
+
+# In[34]:
+
+
+# List count() Method:returns count of how many times obj
+#occurs in list.
+
+
+# In[35]:
+
+
+aList =[123,'xyz','zara','abc',123]
+print("Count for 123 : ",aList.count(123))
+print("Count for zara : ",aList.count('zara'))
+
+
+# In[37]:
+
+
+# List extend() Method: Appends 
+#the contents of seq to list . list.extend(seq)
+
+
+# In[5]:
+
+
+aList =[123,'xyz','zara','abc',123]
+print("alist",aList)
+bList =[2009,'manni']
+aList.append(bList)
+aList.extend(bList)
+print("Extended List : ",aList) 
+
+
+# In[76]:
+
+
+#  List sort() Method:sorts objects of list, 
+#use compare func if given.
+
+
+# In[50]:
+
+
+
+#aList = [123,'xyz','zara','abc','xyz']
+aList = [2,6,8,34,1,2,4,78]
+aList.sort()
+print("List : ",aList)
+
+
+# In[77]:
+
+
+# List reverse() Method:reverses objects of list in place.
+
+
+# In[2]:
+
+
+
+aList = [123,'xyz','zara','abc','xyz']
+aList1 = [2,6,8,34,1,2,4,78]
+aList1.sort()
+aList.reverse()
+aList1.reverse()
+print("List : ",aList)
+print("List : ",aList1)
+
+
+# In[78]:
+
+
+# List remove()Method: This method does not return any 
+# value but removes the given object from the list
+
+
+# In[19]:
+
+
+aList = [123,'xyz','zara','abc','xyz']
+aList.remove('xyz')
+print("List : ",aList)
+aList.remove('abc')
+print("List : ",aList)
+
+
+# In[61]:
+
+
+# List index() Method:eturns the lowest index
+#in list that obj appears.
+#Syntax:list.index(obj)
+
+
+# In[20]:
+
+
+a_List =[123,'xyz','zara','abc','xyz']
+print("Index for xyz : ", a_List.index('xyz'))
+print("Index for zara : ", a_List.index('zara'))
+
+
+# In[74]:
+
+
+#List insert() Method:  inserts  the  given  element  at the  given 
+# index.
+# syntax:list.insert(index,obj)
+
+
+# In[75]:
+
+
+a_List =[123,'xym','zara','abc','xyz']
+print(a_List)
+a_List.insert(3,'ABC')
+print("final list :",a_List)
+
+
+# In[5]:
+
+
+#Nested List: We can create a list inside 
+#another list.
+
+
+# In[21]:
+
+
+Record = ['welcome',['aman','raj','rahul'],
+          [1,2,3,4,5]]
+print(Record)
+print(Record[0][3])
+print(Record[1][1])
+print(Record[2][0])
+
+
+# In[7]:
+
+
+#l =[]
+
+l1 = [22,56,78]
+l2 = [22,56,78]
+
+
+# In[4]:
+
+
+l = []
+l1 = [22,56,78]
+l2 = [22,56,78]
+for i in range(len(l1)):
+    l.append(l1[i] + l2[i])    
+print(l)
+
+
+# In[4]:
+
+
+s = "    hi niet       "
+print(len(s))
+print(s)
+s.strip()
+
+# TUPLES :
+They are just like list. 
+They cannot be adjusted.
+We use () in tUPLES. It is a sequence of immutable(UNABLE TO CHANGE) objects. 
+Value can’t be deleted or updated in it.
+# # TUPLES      VS                      LIST :
+# 1)Immutable                         1)Mutable
+# 2) ()                               2) [] 
+# 3)Secure and safe:     3)Unsecure and Unsafe                               
+#      After creation of table
+#     you cant alter it
+# 4)Fast                              4)Slow
+
+# # Accessing Values in Tuples:
+
+# In[9]:
+
+
+tup1 =('physics','chemistry',1997,2000)
+tup2 =(1,2,3,4,5,6,7)
+print("tup1[0]: ", tup1[0])
+print("tup2[1:5]: ", tup2[1:5])
+
+
+# # Updating Tuples
+
+# In[6]:
+
+
+tup1 =(12,34.56);
+tup2 =('abc','xyz');
+# Following action is not valid for tuples
+#tup1[0] = 100
+# So let's create a new tuple as follows
+tup3 = tup1 + tup2;
+print (tup3)
+
+
+# # Delete Tuple Elements
+
+# In[25]:
+
+
+#Delete individual element in tuple is not supported. 
+#However the whole of the tuple can be deleted using the del statement.
+
+
+# In[11]:
+
+
+tup =('physics','chemistry',1997,2000)
+print (tup)
+del tup
+print("After deleting tup : ")
+print (tup)
+
+
+# # Basic Tuples Operations
+
+# In[12]:
+
+
+#Same as list operation.
+
+
+# # Built-in Tuple Functions
+
+# In[24]:
+
+
+"""
+
+len(tuple)
+Gives the total length of the tuple.
+
+max(tuple)
+Returns item from the tuple with max value.
+
+min(tuple)
+Returns item from the tuple with min value.
+
+tuple(seq)
+Converts a list into tuple.
+
+"""
+
+
+# In[22]:
+
+
+min((1,2,3,4))
+
+
+# In[15]:
+
+
+tuple([1,2,3,4,5])
+
+
+# In[21]:
+
+
+max((1,2,3,4))
+
+
+# In[20]:
+
+
+len((1,2,3,4,5))
+
+
+# In[6]:
+
+
+l = (1,2,3,4)
+list(l)
+print(l)
+
+
+# # Dictionary
+# """ dictionary is an ordered/unordered set of key and value pair.
+# it is an container that contains data, enclosed in curly braces.
+# the pair key and value known as item. the key passed in the item
+# must be unique.
+# the key and value seperated by colon(:).
+# the items are seperated from each other by a comma(,).
+# different item are enclosed within a curly braces and this form a dictionary.
+# dictionary is mutable i.e. value can be updated.
+# dictionary is known as associative array since the key work as index and
+# they are decided by the user.
+# 
+# python 3.5: dictionary is unordered
+# python 3.7 : dictionary is ordered"""
+# 
+
+# # Accessing values:-
+
+# In[6]:
+
+
+data = {100:'ravi',101: 'sonal', 102:'Namit',103:'Nabin'}
+print(data)
+print(data[102])
+
+data2={}
+data2[1]='ravi'
+data2[2]='manoj'
+data2['name']='sonal'
+data2['age']=28
+data2['salary']=50000
+print(data2)
+print(data2['name'])
+print(data2[2])
+
+
+# # updation of items:-
+
+# In[9]:
+
+
+data1={'id':100,'name': 'suresh','profession':'developer'}
+data2={'id':101,'name': 'jyoti','profession':'Trainer'}
+print(data1)
+print(data2)
+data1['profession']='manager'
+print(data1)
+data2['salary']= 60000
+print(data2)
+print()
+
+
+# In[7]:
+
+
+d ={'id':100,'name': 'suresh','profession':'developer'}
+for i in d:
+    print(i,":",d[i])
+
+
+# In[29]:
+
+
+#it is mutable, so we can delete element one or single element, 
+#group or complete using del statement.
+#del statement is used for performing deletion operation""""
+
+
+# # deletion:-
+
+# In[10]:
+
+
+data3={'id':100,'name': 'suresh','profession':'developer'}
+del data3['name']
+print(data3)
+del data3
+#print(data3)
+print()
+
+
+# In[34]:
+
+
+# clear: clear method/function is used to remove content of dictionary
+#del is a statement  used to  remove complete dictionary
+
+
+# In[11]:
+
+
+data3={'id':100,'name': 'suresh','profession':'developer'}
+print(data3)
+data3.clear()
+print(data3)
+print()
+
+
+# # functions in dictionary
+
+# In[12]:
+
+
+#len(dictionary):-
+data4 = {'id':104,'name': 'jyoti sharma','profession':'singer','age':21}
+print(data4)
+print(len(data4))
+
+
+# In[36]:
+
+
+#from keys(sequence,value)
+#use:= when we have multiple index, each and every index carry same value
+
+sequence=('id','name' ,'profession')
+data5={}
+data6={}
+data5= data5.fromkeys(sequence)
+print(data5)
+data5= data5.fromkeys(sequence,'hello')
+print(data5)
+print()
+
+
+# In[35]:
+
+
+#copy():- it returns an ordered of the data
+data4 = {'id':104,'name': 'jyoti sharma','profession':'singer','age':21}
+data7=data4.copy()
+print(data4)
+print(data7)
+data7['name']='renuka'
+print(data7)
+print(data4)
+print()
+
+
+# In[10]:
+
+
+data4 = {'id':104,'name': 'jyoti sharma','profession':'singer','age':21}
+data7=data4
+print(data4)
+print(data7)
+data7['name']='renuka'
+print(data7)
+print(data4)
+
+
+# In[41]:
+
+
+#get (key):- return the value of the given key,
+# if key is not present it return none
+
+data7 = {'id':104,'name': 'jyoti sharma','profession':'singer',
+         'age':21,}
+print(data7)
+print(data7.get('name'))
+print(data7.get('email'))
+
+
+# In[20]:
+
+
+#nested dictionary: when we want to store multiple employee record in single variable
+
+EmpRecord={1:{'id':101,'name': 'jyoti sharma','profession':'singer','age':21},
+           2:{'id':102,'name': 'Rahul sharma','profession':'Developer','age':28},
+           3:{'id':103,'name': 'Sonal','profession':'Trainer','age':25},
+           4:{'id':104,'name': 'Namit','profession':'Artist','age':26}}
+print(EmpRecord)
+print()
+
+
+# In[41]:
+
+
+# updation in nested dictionary
+EmpRecord[5] = {}
+EmpRecord[5]['id']=105
+EmpRecord[5]['name']='roshan'
+EmpRecord[5]['age']= 29
+EmpRecord[5]['gender']='Male'
+print(EmpRecord[5])
+print(EmpRecord)
+print()
+
+
+# In[ ]:
+
+
+
+
+
+# In[42]:
+
+
+#deletion in nested record how to delete from a nested  dictionary
+print(EmpRecord[3])
+del EmpRecord[3]['age']
+#del EmpRecord[3]
+print(EmpRecord[3])
+
+print(EmpRecord[3])
+
+
+# # set : set is a collection type,has been part of python since version 2.4. a set contains an unordered collection of unique and mutable object.
+
+# In[77]:
+
+
+a ={12,12,45,67,34,45,89,60,12}
+print(a)
+
+
+# In[86]:
+
+
+c = {'python','java','c++'}
+c1=c.copy()
+print(c)
+print(c1)
+
+
+# In[ ]:
+
+
+#manipulation between set data type
+
+
+# In[80]:
+
+
+# add() method is used to add new element in the set
+
+
+# In[87]:
+
+
+c.add('ml')
+c1.add('ml')
+print(c)
+print(c1)
+
+
+# In[ ]:
+
+
+# remove() method is used to add new element in the set
+
+
+# In[83]:
+
+
+c.remove('python')
+print(c)
+
+
+# In[ ]:
+
+
+#clear() method is used to delete element of the set
+
+
+# In[91]:
+
+
+c.clear()
+print(c)
+print(c1)
+
+
+# frozen set():it is a predefind method & used for create 
+# immutable set data type.it freez all elements o the set
+# (convert mutableset to immutable set)
+
+# In[94]:
+
+
+c = frozenset(['python','java','c++'])
+print (c)
+
+
+# In[ ]:
+
+
+c.remove('python')
+print(c)
+
+
+# In[ ]:
+
+
+c.add('ml')
+print(c)
+
+
+# In[97]:
+
+
+#empty set
+
+
+# In[104]:
+
+
+c=set()
+print (c)
+c.add('ml')
+print (c)
+
+
+# In[108]:
+
+
+d = {'id':104,'name': 'jyoti sharma','profession':'singer',
+         'age':21,}
+print(d)
+print(type(d))
+k = list(d.keys())
+b = list(d.values())
+print(k)
+print(b)
+print(type(b))
+
+
+# In[25]:
+
+
+print('hello world'[8])
+
+
+# In[4]:
+
+
+'hello world'[8]
+
+
+# In[3]:
+
+
+print('tinker'[1:4])
+
+
+# In[5]:
+
+
+'tinker'[1:4]
+
+
+# In[ ]:
+
+
+
+
+
+# """looping statement: looping statement are used to execute a some block of code for spacified number no times
+# generally in python looping statement are two types
+# 
+# 1) while loop
+# 2) for loop
+# 3) nested loop
+# 
+# 
+# A) while loop: also called entry control loop
+# Syntax: while(condition):
+#         body of loop
+#         increment/decrement
+# - loop is executed till condition goes to true
+# """
+
+# In[ ]:
+
+
+i=1
+while(i>=10):
+    print(i)
+    i+=1
+
+
+# In[11]:
+
+
+i=1
+while(i<=10):
+    print( i ,end='\n')
+    i+=1
+
+
+# In[11]:
+
+
+i=1
+while(i<=10):
+    print(i,end='\n')
+    break
+
+
+# In[12]:
+
+
+n=int(input("enter: any number"))
+i=1
+while(i<=n):
+    print(i,end='\n')
+    i+=1
+
+
+# In[12]:
+
+
+n=int(input("enter any number"))
+i=1
+while(i<=20):
+    print(n*i,end='\n')
+    i+=1
+    
+
+
+# In[13]:
+
+
+x='Y'
+while(x=='Y'):
+    n=int(input("enter any number"))
+    i=1
+
+    while(i<=10):
+        print(n,"*",i,"=",n*i)
+        i+=1
+    x=input(" do you want to continue yes(Y) or No(N)")
+
+
+# In[1]:
+
+
+while True:
+    n=int(input("enter any number"))
+    i=1
+    while(i<=10):
+        print(n,"*",i,"=",n*i)
+        i+=1
+    x=input("do you want to continue yes(y) or No(N)")
+    if(x=="N"):
+        break
+
+
+# In[3]:
+
+
+i=1
+while(i<=10):
+    j=1
+    while(j<=10):
+        if(j==10):
+            print(i*j,end="")
+            break
+        print(i*j,end=",  ")
+        j+=1
+    print()
+    i+=1
+
+
+# In[4]:
+
+
+i=1
+while(i<=10):
+    j=1
+    while(j<=10):
+        if(j==10):
+            print(i*j,end="")
+        else:
+            print(i*j,end=",  ")
+        j+=1
+    print()
+    i+=1
+
+
+# In[2]:
+
+
+words = []
+word = input("word:")
+while word:
+    words.append(word)
+    word = input("word:")
+words = (',').join(words)
+print(words)
+
+
+# In[14]:
+
+
+#for var in sequence:
+#for var in range():
+#    body of a loop
+
+
+# In[19]:
+
+
+for x in [1,3,7,9,5]:
+    print(x)
+#print()
+
+
+
+
+
+# In[18]:
+
+
+## it is used for code optimization
+for i in range(10):
+    print(i)
+   
+
+
+# In[21]:
+
+
+
+for i in range(1,11):
+    print(i)
+    #print()
+
+
+
+# In[22]:
+
+
+
+for i in range(1,11,2):
+    print(i)
+   # print()
+
+
+# In[26]:
+
+
+n=int(input("enetr any number"))
+for i in range(n,-1,-1):
+    for j in range(0,n-i):
+        print(' ',end=' ')
+    for k in range(0,i+1):
+        print("*",end=' ')
+    print()
+
+
+# In[29]:
+
+
+print(*range(10), sep=', ')
+
+
+# In[19]:
+
+
+'My name is {0!s:7} {1}'.format('Dunkin', 'Donuts')
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[24]:
+
+
+print (*range(10), sep=',')
+
+
+# # Conditions
+# Conditions are used in programming languages to execute code and produce the result only if a certain condition is met or satisfied.
+# In Python, if statements are used for conditional execution. The types of if statements used are as follows:
+
+# 1):Simple if statements
+# 2):if else Statement
+# 3):elif Statement
+# 4):Nested if Statements
+# 
+
+# simple if statement: the program evaluates the if expression and executes statements only if the specified condition is true.
+
+# In[111]:
+
+
+x = 20
+if (x > 10):
+    print("x is greater")
+print("x is greater")
+
+
+# In[ ]:
+
+
+#The if else Statement
+
+
+# In[112]:
+
+
+x = 20
+y = 25
+if (x > y):
+    print("x is greater")
+else:
+    print("y is greater")
+
+
+# In[ ]:
+
+
+#The elif Statement
+
+
+# The elif keyword is used in Python as a replacement of the else if statements used in other programming languages.
+
+# In[114]:
+
+
+x = 20
+y = 20
+if (x > y):
+    print("x is greater")
+elif (x == y):
+    print("x and y are equal")
+else:
+    print("y is greater")
+
+
+# Nested if Statements:A code is said to have nested if statements when you have an if statement and/or an if else statement inside another if or if else statement.
+
+# In[56]:
+
+
+num = int(input())
+if (num >= 0):
+    if (num == 0):
+        print("Zero")
+    else:
+        print("Positive number")
+else:
+    print("Negative number")
+
+
+# In[8]:
+
+
+cel = {
+    "Jamie Oliver": 101,
+    "Gordon Ramsay": "Sophisticated and angry",
+    "Gennaro Contaldo": "Romantic Italian"
+}
+cel["Gennaro Contaldo"]
+
+
+# In[9]:
+
+
+for c in cel:
+    print('KEY: ' + c + '\tVALUE: ' + cel[c])
+
+
+# In[7]:
+
+
+n=10
+num =65
+for i in range(n):
+    for j in range(i+1):
+        ch =chr(num)
+        print(ch, end=" ")
+        num =num +1
+    print()
+    
+    
+
+
+# ASCII VALUE
+# A-Z =[65-90]
+# a-z = [97-122]
+# 0-9 = [48-57]
+# spacial symbol = [0-47,58-64,91-96,123-127]
+
+# In[8]:
+
+
+n=10
+num =65
+for i in range(n):
+    for j in range(i+1):
+        ch =chr(num)
+        print(ch, end=" ")
+    num =num +1
+    print()
+    
+
+
+# In[15]:
+
+
+n=10
+num =1
+for i in range(n):
+    for k in range(n+20):
+        print('', end=" ")
+    
+    for j in range(i+1):
+        print(num, end=" ")
+        num =num +1
+    print()
+
+
+# In[51]:
+
+
+n=10
+num =1
+for i in range(n-1):
+    for k in range(n+20):
+        print('', end=" ")
+    
+    for j in range(i+1):
+        print(num, end=" ")
+    num =num +1
+    print()
+
+
+# In[15]:
+
+
+n=10
+
+for i in range(n):
+    print(i,end=" ")
+    for k in range(n):
+        print('', end=" ")
+    num =1
+    for j in range(i+1):
+        
+        print(num, end=" ")
+        num =num +1
+    print()
+
+
+# In[49]:
+
+
+#Python Program to Count the Number of Each Vowel
+vowels = 'aeiou'
+s_t = 'Hello, have you tried our turorial section yet'
+# = input("Enter a string: ")
+s_t = s_t.casefold()
+count = {}.fromkeys(vowels,0)
+count = {}.fromkeys(vowels,0)
+for char in s_t:
+    if char in count:
+        count[char] += 1
+print(countm)
+
+
+# #break statment:It terminates the current loop and resumes execution at the next statement, just like the traditional break statement in C.
+
+# In[54]:
+
+
+n = 6
+num = 65
+for i in range(n):
+    print(i,end=':')
+    for j in range(5):
+        ch =chr(num)
+        print(ch,end=',')
+        if(ch=='Z'):
+            break
+        num+=1
+    print()
+
+
+# In[34]:
+
+
+l = [['hammerhead', 'great white', 'dogfish'],[0, 1, 2],[9.9, 8.8, 7.7]]
+for list in l:
+    print(list)
+
+
+# In[36]:
+
+
+password = ''
+while(password != 'password'):
+    print('What is the password?')
+    password = input()
+print('Yes, the password is '+ password + '. You may enter.')
+
+
+# In[45]:
+
+
+fruits=['banana','apple','mango']
+n =int(input())
+
+print("Good bye!")
+
+
+# In[48]:
+
+
+count=10
+while(count >0):
+    print('The count is:',count)
+    count=count -1
+print("Good bye!")
+
+
+# #It returns the control to the beginning of the while loop.. The
+# continue statement rejects all the remaining statements in the current iteration of the loop and moves the control back to the top of the loop.
+
+# In[59]:
+
+
+for letter in'Python':
+# First Example
+    if letter =='h':
+        continue
+    print('Current Letter :',letter)
+
+
+# #Program to exclude the number which are divisible by 3 till range 30.
+
+# In[67]:
+
+
+for i in range(31):
+    if (i%3==0):
+        continue
+# Third Example
+    print(i,end=',')
+
+
+# In[3]:
+
+
+c= input("Enter a character: ")
+print("The ASCII value of '" + c + "' is",ord(c))
+
+
+# # Python Program to Sort Words in Alphabetic Order
+
+# In[76]:
+
+
+my_str = input("Enter a string: ")
+words = my_str.split()
+words.sort()
+print("The sorted words are:")
+for word in words:
+    print(word)
+
+
+# # Python Program to Remove Punctuations From a String
+
+# In[4]:
+
+
+p = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+my_str = input("Enter a string: ")
+no_pun = ""
+for c in my_str:
+    if c not in p:
+        no_pun = no_pun + char
+# display the unpunctuated string
+print(no_pun)
+               
+
+
+# Functions in Python: Functions are generally the block of code which comprises of a group of programming statements, it can provide an easy way for reusing of programming statements. It can reduce complexity of program.
+# 
+# Type of Functions:
+# -System Defined
+# -User defined
+# 
+# Classification of functions:
+#     Functions can be classified on the basis of their return type and passing arguments.
+#     1)Function with no argument and no return type
+#     2)Function with arguments and wwith no value return types
+#     3)Function with arguments and return value
+#     4)Function with no argument but return value
+# 
+# How to define function:
+#     Syntax:
+#         def fun_name(parameter):
+#             Body of function
+
+# In[1]:
+
+
+def my_function():
+    print("Hello from a function")
+
+
+# #Sum of two numbers
+
+# In[2]:
+
+
+def sum(x,y):
+    s=x+y
+    """Going to add two String"""
+    print("sum of two number")
+    print(s)
+
+
+sum(10,20)
+sum(50,60)
+
+    
+
+
+# Return  statement:return statement is used to send back the control the caller with the expression.
+# -In case no epression is given after return it will return none
+# -in other word return statement is used to exit the function definition.
+# -in python we use return in two cases:1)with value 2)without value
+
+# In[ ]:
+
+
+
+
+
+# In[4]:
+
+
+def sum(a,b):
+    """ Adding the two values"""
+    print("printing within function")
+    print(a+b)
+    return(a+b)
+
+def msg():
+    print("hello")
+    return
+
+def multiply(a,b):
+    """ multiplication of two number"""
+    print("printing with in function Multiplication")
+    print(a*b)
+    return(a*b)
+
+x=int(input("enetr value of x"))
+y=int(input("enter value of y"))
+total= sum(x,y)
+total1= multiply(x,y)
+print("printing outside:",total)
+print()
+print("printing outside the function",total1)
+msg()
+print("rest of code")
+
+
+# In[5]:
+
+
+def area (x):
+    print("area of circle:")
+    print(3.14*x*x)
+    return(3.14*x*x)
+
+r=float(input("Enetr value of  Radious "))
+Area = area(r)
+print("area of circle outside the function:",Area)
+
+
+# In[6]:
+
+
+def cube(x):
+    print("printing cube of a number")
+    print(x**3)
+    return(x**3)
+
+a= float(input("enter value for cube"))
+Cube=cube(a)
+print("printing cube outside the function", Cube)
+
+
+# In[7]:
+
+
+def fac(n):
+    if n==1:
+        return(1)
+    else:
+        #print( n* fac(n-1))
+        return(n*fac(n-1))
+
+n=int(input("enter any  number"))
+t=fac(n)
+print("factorial of ",n,"is:")
+print(t)
+
+
+# In[8]:
+
+
+def renuka():
+    print("hello renuka how r you")
+    msg()
+
+def msg():
+    print("india is beautiful country")
+
+
+
+renuka()
+
+
+# In[10]:
+
+
+def f(a, L=[]):
+    L.append(a)
+    return L
+print(f(1))
+print(f(2))
+print(f(3))
+print(f(4))
+print(f(5))
+print(f(6))
+
+
+# In[11]:
+
+
+def fibonacci(n):
+    f1=0
+    f2=1
+    print(f1,end='')
+    print()
+    print(f2)
+    total=0
+    i=1
+    while(i<=n):
+        total=f1+f2
+        print(total)
+        f1=f2
+        f2=total
+        i+=1
+    return()
+
+
+# # passing arguments and parameters:
+# python support following type of formal arguments:
+# 1)positional arguments(required arg)
+# 2)default arguments
+# 3)keyword arguments(named arguments)
+# 
+
+# In[3]:
+
+
+def msg(id,name,age=23):
+    print("id is:",id)
+    print("name is:",name)
+    print("age is:",age)
+    return
+
+msg(100,'renuka',30)
+msg(101,'vishu')
+
+
+# #keyword arguments: to work sequencly or randomly with value we use 
+# keyword arguments
+
+# using the keyword arguments,the argument passed in function call is matched with function definitionon the basis of the name of the parameter.
+
+# In[5]:
+
+
+def msg(id,name,age=23):
+    print("id is:",id)
+    print("name is:",name)
+    print("age is:",age)
+    return
+
+msg(id=100,name='renuka',age=30)
+msg(name='vishu',id=101)
+
+
+# scope of variable:
+# 1)local variable: within function body
+# 2)global variable:within whole program
+# 
+
+# # local variable can access inside the function,outside the function it does not work,return error
+#     
+
+# In[9]:
+
+
+def m():
+    a = 10
+    print("value of a is:",a)
+    return
+m()
+#print(a)
+
+
+# # example  of global variable
+
+# In[10]:
+
+
+b=20
+def m():
+    a = 10
+    print("value of a is:",a)
+    return
+m()
+print(b)
+
+
+# # how to access global variablr inside function with value
+
+# In[16]:
+
+
+a=20
+def m():
+    global a 
+    a = 30
+    print("value of a is:",a)
+    return
+m()
+print(a)
+
+
+# # Recursion:we know that in python,a functioncan call other functions.it is even possible for the function to call itself.these type of construct are termed as recursive function.
+
+# #example of recursive function
+
+# In[19]:
+
+
+def recur_fact(x):
+    if(x==1):
+        return(1)
+    else:
+        return(x*recur_fact(x-1))
+
+n=int(input())
+if n>=1:
+    print(recur_fact(n))
+
+
+# """ Lambda function: (also known as Anonymous function or function without name)
+# mostly used in : Django,Machine Learing, Data Science
+# language use Lambda: java,python/not in c
+# real use: code optimization
+# 
+# Lambda function: - in python,anonymous function is a function is a function
+# that is defind without a name.
+# - anonymous function are created using a keyword "Lambda"
+# -Lambda takes as any number of arguments and return an evaluated expression.
+# -Lambda is created without using a def keyword
+# -We use Lambda function when we require a nameless
+#  function for a short period of time
+#  -Lambda Function are used along with builtin function like filter(), map() or
+#  reduce() etc
+#  -Advantage of Lambda is taken with with map(),filter() or reduce() function
+# 
+#  # how to create Lambda function & camparison between normal function
+#  and Lambda function"""
+# 
+# 
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+#normal function EXAMPLE:
+def square(x):
+    return x*x
+print("square of a number is ",square(10))
+print()
+print()
+
+
+# In[ ]:
+
+
+# lambda function
+# syntax: arg1,arg2,arg3: expression
+
+square = lambda x1: x1*x1
+print("square of a number is ",square(10))
+print()
+print()
+
+# examples of lambda function:
+#A lambda function is a small anonymous function.
+
+#A lambda function can take any number of arguments,
+#but can only have one expression.
+
+x = lambda a : a + 10
+print(x(5))
+print()
+print()
+
+
+
+# In[ ]:
+
+
+#2
+x = lambda a, b : a * b
+print(x(5, 6))
+print()
+print()
+
+# 3
+x = lambda a, b, c : a + b + c
+print(x(5, 6, 2))
+print()
+print()
+
+#4
+def myfunc(n):
+  return lambda a : a * n
+
+mydoubler = myfunc(2)
+mytripler = myfunc(3)
+
+print(mydoubler(11)) 
+print(mytripler(11))
+print()
+print()
+
+
+# In[ ]:
+
+
+#filter function: the filter() function filters the given sequence with the help
+# of a  function that tests each element in the sequence to be true or not
+# filter work with condition,without condition it does not work.make code fast
+
+#L={1,2,3...........,20} find list(even or odd number), we use filter here
+
+my_list=[1,5,4,6,8,11,3,12]
+new_list=list(filter(lambda x:(x%2==0),my_list))
+print(new_list)
+print()
+print()
+
+
+# In[ ]:
+
+
+##########
+
+fib = [0,1,1,2,3,5,8,13,21,34,55]
+result = filter(lambda x: x % 2, fib)
+result = list(filter(lambda x: x % 2, fib))
+print(result)
+result = filter(lambda x: x % 2 == 0, fib)
+result = list(filter(lambda x: x % 2 == 0, fib))
+print(result)
+print()
+print()
+
+
+# In[ ]:
+
+
+#Map function: map() function returns a list of the results after applying
+#the given function to each item of a given iterable(list,tuple etc.)
+#it work without condition,it check complete list and return
+# true or false.
+
+my_list=[1,5,4,6,8,11,3,12]
+new_list=list(map(lambda x:(x%2==0),my_list))
+print(new_list)
+print()
+print()
+
+
+# In[ ]:
+
+
+my_list=[1,5,4,6,8,11,3,12]
+new_list=list(map(lambda x:(x*2),my_list))
+print(new_list)
+print()
+print()
+
+
+# In[ ]:
+
+
+# normal without using map
+def fahrenheit(T):
+    return ((float(9)/5)*T + 32)
+def celsius(T):
+    return (float(5)/9)*(T-32)
+temp = (36.5, 37, 37.5,39)
+
+F = map(fahrenheit, temp)
+C = map(celsius, F)
+print()
+print()
+
+
+# In[ ]:
+
+
+########
+Celsius = [39.2, 36.5, 37.3, 37.8]
+Fahrenheit = map(lambda x: (float(9)/5)*x + 32, Celsius)
+print (Fahrenheit)
+C = map(lambda x: (float(5)/9)*(x-32), Fahrenheit)
+print (C)
+print()
+print()
+
+
+# In[ ]:
+
+
+#####
+a = [1,2,3,4]
+b = [17,12,11,10]
+c = [-1,-4,5,9]
+new_list=list(map(lambda x,y:x+y, a,b))
+
+new_list1=list(map(lambda x,y,z:x+y+z, a,b,c))
+
+new_list2=list(map(lambda x,y,z:x+y-z, a,b,c))
+print(new_list2)
+print(new_list)
+print(new_list1)
+print()
+print()
+
+
+# In[ ]:
+
+
+#################
+a = [1,2,3,4]
+b = [17,12,11,10]
+c = [-1,-4,5,9]
+new_list=list(map(lambda x,y:x+y, a,b))
+new_list1=list(map(lambda x,y,z:x+y+z, a,b,c))
+new_list2=list(map(lambda x,y,z:x+y-z, a,b,c))
+new_list3=list(map(lambda x,y:(y/x==0), a,b))
+new_list4=list(map(lambda x,y,z:x*y*z, a,b,c))
+new_list5=list(map(lambda x,y,z:x+y*z, a,b,c))
+print(new_list)
+print(new_list1)
+print(new_list2)
+print(new_list3)
+print(new_list4)
+print(new_list5)
+print()
+print()
+
+ 
+
+
+# In[21]:
+
+
+#Reduce function: reduce function reduce() reduce a value into a single value
+#by combinig  elements via a supplied function
+#- it is used to reduce multiple list into a single list
+#-it does not work directly ,for this you need to import module
+
+# example:
+import functools
+my_list=[2,4,8,10,12,20]
+result=functools.reduce(lambda x,y:(x+y),my_list)
+print(result)
+print()
+print()
+
+
+# In[20]:
+
+
+####
+
+import functools
+my_list=[2,4,8,10,12,20]
+result=functools.reduce(lambda x,y:(x*y),my_list)
+print(result)
+print()
+print()
+
+######
+import functools
+f = lambda a,b: a if (a > b) else b
+new_list=functools.reduce(f, [47,11,42,102,13])
+print(new_list)
+print()
+print()
+
+########
+import functools
+new_list=functools.reduce(lambda x, y: x+y, range(1,101))
+print(new_list)
+
+
+# In[ ]:
+
+
+
+
