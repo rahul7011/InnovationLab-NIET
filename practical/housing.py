@@ -61,25 +61,35 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, rando
 
 # Fitting Multiple Linear Regression to the Training set
 from sklearn.linear_model import LinearRegression
-regressor = LinearRegression()
-regressor.fit(X_train, y_train)
+lin_reg = LinearRegression()
+lin_reg.fit(X_train, y_train)
 
 # Predicting the Test set results
-y_pred = regressor.predict(X_test)
+y_pred_ln = lin_reg.predict(X_test)
 
 
-
+#for linear regression
 from sklearn.metrics import mean_squared_error,r2_score
-lie_mse1=mean_squared_error(y_test,regressor.predict(X_test))
+lie_mse1=mean_squared_error(y_test,lin_reg.predict(X_test))
 line_rmse1=np.sqrt(lie_mse1)
 print(line_rmse1)
-r2_score(y_test,regressor.predict(X_test))
+r2_score(y_test,lin_reg.predict(X_test))
 
+# Fitting Linear regression
 
+# Fitting Polynomial Regression to the dataset
+from sklearn.preprocessing import PolynomialFeatures
+poly_reg = PolynomialFeatures(degree =4)
+X_poly = poly_reg.fit_transform(X_train)
+poly_reg.fit(X_poly, y_train)
+lin_reg_2 = LinearRegression()
+lin_reg_2.fit(X_poly, y_train)
 
-plt.title('Simple linear regression with FD')
-plt.xlabel('random number')
-plt.ylabel('value of theta')
-plt.scatter(X,y)
-plt.plot(X,y_pred)
-plt.show()
+y_pred_pl = lin_reg_2.predict(poly_reg.fit_transform(X_test))
+
+#for polynomial regression
+from sklearn.metrics import mean_squared_error,r2_score
+lie_mse2=mean_squared_error(y_test,lin_reg_2.predict(poly_reg.fit_transform(X_test)))
+line_rmse2=np.sqrt(lie_mse2)
+print(line_rmse1)
+r2_score(y_test,lin_reg_2.predict(poly_reg.fit_transform(X_test)))
